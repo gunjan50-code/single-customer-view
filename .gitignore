@@ -1,0 +1,27 @@
+# Generated data. Everything here is reproducible with `python run_pipeline.py`
+# in about two minutes, and committing ~80 MB of CSVs to make that point would
+# be silly. The seed in config.py is fixed, so a fresh clone reproduces the
+# exact numbers in the README.
+data/raw/*.csv
+data/processed/*.csv
+data/processed/*.db
+data/processed/*.joblib
+
+# Keep the folders themselves so the pipeline has somewhere to write.
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Reports ARE committed -- they are small, and they are the evidence behind
+# the numbers in the README.
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.streamlit/secrets.toml
+.env
+.vscode/
+.idea/
+.DS_Store
