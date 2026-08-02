@@ -11,21 +11,29 @@ A woman opens a savings account at a branch in 2019 and a clerk types her name b
 hand. In 2021 she applies for a credit card online and types it herself, slightly
 differently. In 2023 she calls support and the agent writes down a nickname.
 
-Here are five rows from this project's generated data. They are all the same man:
+Here are five rows from this project's generated data, printed by
+`python -m src.inspect_sample`. They are all the same woman:
 
-| source | first | middle | last | dob | email | phone | address | city |
+| source | first | last | dob | email | phone | address | city | pincode |
 |---|---|---|---|---|---|---|---|---|
-| web_signup | Mohit | Krishna | Mukherjee | 1998-06-11 | mohit.m54@outlook.com | 8379937124 | 4 Crs Rd | Kochi |
-| crm | Mukherjee | Krishna | Mohit | 11/06/1998 | mohit.m54@outlook.com | 083799-37124 | No. 4 Crs Road | Kochi |
-| billing | Mohit | | Mukherjee | 11.06.1998 | mohit.m@outlook.com | (8379) 937124 | 4 Crs Road | Kochi |
-| loyalty | MOHIG | | MUKHERJEE | 11.06.1998 | mohit.m@outlook.com | not provided | 4 Cross Rd | KOCHI |
-| loyalty | Moyit | | Mukherjee | 1998-06-11 | mohit.m@hotmail.com | 083799-37124 | 4 Cross Road | Kochi |
+| web_signup | Pillai | Lakshmi | 05/06/1997 | laks@yahoo.co.in | 8741347350 | 302 Sector 14 | Jaipur | 640535 |
+| crm | Lakshmi | Pillai | 05 Jun 1997 | lakshmi.p@yahoo.co.in | 8741348350 | 302 Sector 14 | Jaipur | 640535 |
+| billing | Lakshmi | Pkllai | 05 Jun 1997 | lakshmi.p@yahoo.co.in | 8741347350 | 302 Sector 14 | Jaipur | 640535 |
+| branch | L. | Pillai | 05 Jun 1997 | lakshmi.p@yahoo.co.in | 087413-47350 | 62 Hospital Road | Visakhapatnam | 562456 |
+| support | LAKSHMI | PILLAI | not provided | not provided | 87413 47350 | 302 SECTOR 14 | JAIPUR | 640535 |
 
 The bank thinks it has five customers. It has one.
 
-That is not a cosmetic problem. Split across five records, his balance looks small
+Every kind of damage this project has to survive is visible in those five rows.
+The first record has the name the wrong way round. The third has a typo in the
+surname. The fourth is initials only, and she had moved house by the time it was
+created, so the address and city agree with nothing. The second has a mistyped
+phone digit. The last is all caps with the date of birth and email missing
+entirely. No two rows are identical, and no single field is reliable on its own.
+
+That is not a cosmetic problem. Split across five records, her balance looks small
 enough to stay under money laundering reporting thresholds. A credit check sees
-one of his loans instead of all five. He gets five copies of every mailer. And
+one of her loans instead of all five. She gets five copies of every mailer. And
 every customer count the bank reports is wrong.
 
 Banks pay consultancies a lot of money to fix this. The industry calls it Master
