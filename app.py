@@ -10,7 +10,12 @@ This is what closes the loop. The labels collected here are exactly the
 training data the model was short of, namely hard and ambiguous cases rather
 than easy synthetic ones, so retraining on them improves the next run.
 
-Run:  streamlit run app.py
+Run:  python -m streamlit run app.py
+
+Invoked through `python -m` rather than the bare `streamlit` command, because
+pip installs console scripts to a directory that is not on PATH under the
+Microsoft Store build of Python, and `streamlit run` fails there with a
+CommandNotFoundException. Going through the interpreter always works.
 """
 
 import html

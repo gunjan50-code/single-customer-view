@@ -57,7 +57,7 @@ def main() -> None:
     print(f"# Pipeline complete in {time.time() - started:.1f}s")
     print("#" * 74)
     print("\nNext:")
-    print("  streamlit run app.py                    review the ambiguous pairs")
+    print("  python -m streamlit run app.py           review the ambiguous pairs")
     print("  python -m src.llm_adjudicator --dry-run  cost of LLM adjudication")
     print("  python -m src.inspect_sample             see the problem itself")
 

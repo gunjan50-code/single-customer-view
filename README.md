@@ -155,8 +155,13 @@ Then have a look at the problem itself, and the review queue:
 
 ```bash
 python -m src.inspect_sample
-streamlit run app.py
+python -m streamlit run app.py
 ```
+
+Streamlit is launched through `python -m` rather than the bare `streamlit`
+command on purpose. Under the Microsoft Store build of Python, pip installs
+console scripts somewhere that is not on PATH, and `streamlit run` fails with
+a CommandNotFoundException. Going through the interpreter works everywhere.
 
 Generated data is gitignored, but the random seed is fixed, so a fresh clone
 reproduces every number above.
