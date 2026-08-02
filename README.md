@@ -161,10 +161,3 @@ streamlit run app.py
 Generated data is gitignored, but the random seed is fixed, so a fresh clone
 reproduces every number above.
 
-## What I would do next
-
-Work the review queue and retrain on those labels, since ambiguous cases teach the
-model far more than easy ones. Add a live endpoint so a customer can be matched at
-the counter during onboarding rather than overnight in a batch. And test it
-against a public benchmark like the North Carolina voter file, to get a score that
-is not flattered by knowing the corruption model in advance.
